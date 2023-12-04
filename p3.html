@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced</title>
+</head>
+<body>
+    <center>
+        <h1>Anonymous Callback functions or Immediate execution 
+            of a function.
+        </h1>
+    </center>
+    <hr>
+
+    <h2>Javascript Functions</h2>
+    <p>1) Local Function = function A(){}</p>
+    <p>2) Expression Function = let A = function(){} </p>
+    <p>3) Arrow Function = let A () => {} </p>
+    <p>4) Callback Function = forEach(function(item){}); </p>
+    <p>5) Closer function = function A() {function B(){} B();}</p>
+    <p>6) Anonymous Functions or Immediate execution of a function = ()(); </p>
+
+    <script>
+        // self constructor
+        // refresh onload
+        // self triggering method
+
+        //Example-1
+        (function(){
+            alert("Hii..Anonymous Function");
+        })();
+
+        //Example-2
+        ((a,b)=>{
+            document.write(`Parameter A Value is : ${a}`);
+            document.write(`Parameter B value is : ${b}`);
+        }
+        )(10,233);
+
+        //Example-3
+        ((a,b)=>{
+            return a+b;
+        })
+        console.log((10,22));
+    </script>
+</body>
+</html>

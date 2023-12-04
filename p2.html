@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced</title>
+</head>
+<body>
+    <center>
+        <h1>CLOSER FUNCTION</h1>
+        <p>Closure functions (stll confused concept): Closure menans that an 
+            inner function always has access to vars and parameters of its outer function.
+        </p>
+    </center>
+    <hr>
+
+    <script>
+        // CALL BACK FUNCTION
+        /* setInteerval(()=>{},1000);
+        array.forEach(element => {}); */
+
+        //Closure Function
+
+        //Example-1
+        function OuterFunction(){
+            let outerVariable = 100;
+
+            function InnerFunction(){
+                document.write("<b> InnerFunction : </b>" + outerVariable + "<br><br>");
+            }
+            InnerFunction();
+        }
+        OuterFunction();
+
+        //Example-2
+        function counter1(){
+            let counter = 0;
+
+            function IncreaseCounter(){
+                return counter += 4;
+            }
+            return IncreaseCounter();
+        }
+        document.write(counter1());
+
+    </script>
+</body>
+</html>

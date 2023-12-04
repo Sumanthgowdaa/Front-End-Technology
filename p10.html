@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced</title>
+</head>
+<body>
+    <center>
+        <h1>set Constructor</h1>
+    </center>
+    <hr>
+
+    <script>
+        let emp = new Set();
+
+        function insert(){
+            return 'Sumanth'
+        }
+        emp.add(insert());
+        emp.add('Suresh');
+        emp.add('Mahesh');
+        emp.add('Harish');
+        emp.add('Harish');
+
+        console.log(emp.entries);
+
+        emp.forEach(function(item){
+            document.write(`<h3> ${item} </h3>`);
+        });
+
+        /*has*/
+        console.log("has('suresh')=",emp.has('Suresh')); //True
+        console.log("has('Manish')=",emp.has('MAnish')); //False
+
+        emp.delete("Mahesh"); //delete set
+
+        console.log('After delete=',emp.entries());
+        console.log('has(Suresh)',emp.has('Suresh'));
+    </script>
+</body>
+</html>
